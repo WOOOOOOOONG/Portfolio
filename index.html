@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>포트폴리오 - 임세웅</title>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<style>
+/*=Typography=*/
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Open sans', sans-serif;
+	font-weight: 300;
+}
+
+.navbar a, .sec-about p {
+	text-align: center;
+}
+
+.navbar a {
+	font-size: 16px;
+}
+
+.navbar .fa-external-link {
+	font-size: 10px;
+}
+
+.main-heading {
+	font-family: 'Open sans', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	letter-spacing: 9px;
+	text-transform: uppercase;
+}
+
+.container>h1 {
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.sec-about a {
+	text-decoration: underline;
+}
+
+.sec-services h2, .sec-services p {
+	font-weight: 300;
+	text-align: center;
+}
+
+.sec-testimonials p {
+	font-style: italic;
+}
+
+.sec-contact .btn {
+	text-transform: uppercase;
+}
+
+.soc-media-ul a {
+	text-align: center;
+	text-decoration: none;
+}
+
+/*=Base=*/
+section {
+	padding: 5em 0;
+}
+
+footer {
+	padding: 3em 0;
+}
+
+form {@media screen and (max-width: 768px) and (min-width: 485px) {max-width: 
+	 70%;
+	
+}
+
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+hr {
+	margin-bottom: 3em;
+	width: 7%;
+}
+
+/*=Layout=*/
+.sec-folio .row {
+	margin-bottom: 3em;
+}
+
+.sec-folio img {
+	max-width: 100%;
+}
+
+/*Header*/
+.navbar-default {
+	background: #fff;
+}
+
+.navbar .fa-external-link {
+	vertical-align: top;
+}
+
+#js-nav {
+	display: inline;
+}
+
+#js-nav li {
+	margin: 0 10px;
+	padding: 0 5px 5px;
+	display: inline;
+}
+
+/*Main*/
+.sec-main {
+	position: relative;
+	height: 560px;
+	background: url(https://source.unsplash.com/kVf7VRgg4p8/1920x1080)
+		no-repeat center center;
+	background-size: cover; 
+}
+
+.main-heading {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	padding: 0;
+	margin: auto;
+	height: 40px;
+	color: #fff;
+}
+
+/*About*/
+.sec-about a {
+	color: #000;
+
+}
+
+.about {
+	margin: 0 auto;
+}
+
+/*Services*/
+.sec-services {
+	background: #f9f9f9;
+}
+
+.sec-services i {
+	display: block;
+	margin: auto;
+	width: 45px;
+}
+
+.sec-services .fa-paint-brush {
+	width: 64px;
+}
+
+.sec-services .fa-code {
+	width: 68px
+}
+
+.sec-services h2 {
+	margin: 1em 0;
+}
+
+/*Testimonials*/
+.sec-testimonials {
+	background: #f9f9f9;
+}
+
+/*Contact*/
+
+.sec-contact .btn {
+	padding: .5rem 1.75rem;
+	background: #000;
+	font-size: .95rem;
+	color: #fff; 
+}
+
+.col-sm-offset-4 {
+	margin: 0 auto;
+}
+
+/*Footer*/
+footer {
+	background: #000;
+}
+
+.soc-media-ul {
+	display: flex;
+	justify-content: center;
+}
+
+.soc-media-ul a {
+	display: block;
+	padding: 0.5em .65rem;
+	font-size: 1rem;
+	color: #fff;
+	border-radius: 50%;
+	border: 2px solid;
+}
+
+#contact input, #contact textarea {
+	background-color: white;
+}
+</style>
+
+</head>
+<body>
+	<div class="wrapper">
+		<header role="header">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+
+						<a href="#" class="navbar-brand">임세웅</a>
+					</div>
+
+					<div>
+						<ul class="nav navbar-nav navbar-right js-nav" id="js-nav">
+							<li><a href="#home">Home</a></li>
+
+							<li><a href="#about">About</a></li>
+
+							<li><a href="#services">Skills</a></li>
+
+							<li><a href="#folio">Project</a></li>
+
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<section id="home" class="sec-main">
+			<h1 class="main-heading">WEB DEVELOPER 임세웅의 포트폴리오</h1>
+		</section>
+
+		<section id="about" class="sec-about">
+			<div class="container">
+				<h1>About me</h1>
+
+				<hr />
+
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3 about">
+						<p>
+							안녕하세요. 제 이름은 임세웅입니다. <br>
+							프로그래밍 지식과 웹 프론트엔드 및 백엔드 기술을 배웠으며, 이를 활용할 수 있는 개발자를 지향하는 중입니다.
+							저만의 홈페이지를 만들거나, 프로그래밍 언어로 직접 코딩하는 것을 좋아하고, 가장 좋아하는 언어는 C++ 입니다.
+							혹시 제게 관심이 있으시다면 <a class="js-connect" href="#footer">저에게 연락</a>해 주시면 감사하겠습니다.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services" class="sec-services">
+			<div class="container">
+				<h1>Skills</h1>
+
+				<hr />
+
+				<div class="row">
+					<div class="col-sm-4">
+						<i class="fa fa-4x fa-paint-brush"></i>
+
+						<h2 class="h3">프로그래밍</h2>
+
+						<p>프로그래밍 언어는 메모리를 자동으로 관리하는 매니지드 언어(Java), 
+							그렇지 않은 언매니지드 언어(C++)로 크게 나눠 메모리 자동관리에 
+							따른 특성 위주의 학습을 했습니다.</p>
+					</div>
+
+					<div class="col-sm-4">
+						<i class="fa fa-4x fa-code"></i>
+
+						<h2 class="h3">프론트엔드</h2>
+
+						<p>HTML, css, Javascript, Jquery, Bootstrap 등의 기술로 사용자에게 보여지는
+							웹사이트 UI 부분을 꾸미기 위한 기술 능력을 갖고 있습니다.</p>
+					</div>
+
+					<div class="col-sm-4">
+						<i class="fa fa-4x fa-tablet"></i>
+
+						<h2 class="h3">백엔드</h2>
+
+						<p>Java 기반으로 백엔드 기술을 익혀 JSP/Servlet와 Oracle DB 연동, Mybatis와 
+							Spring등의 프레임워크를 다룰 수 있습니다.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="folio" class="sec-folio">
+			<div class="container">
+				<h1>Project</h1>
+
+				<hr />
+				
+				<div class="row">
+					<div class="col-md-6">
+						<a href="https://github.com/WOOOOOOOONG/Project_TravelMaker">
+							<img class="center-block"
+								src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fb4FduG%2FbtqBrmUChFo%2FpuFZl3XnzlUKTZSAczeMl0%2Fimg.png"
+								alt="Introduce Travel" />
+						</a>
+					</div>
+					<div class="col-sm-6 col-sm-offset-3">
+						<h1>Travel Maker</h1>
+						<p>개발 인원 : 4</p>
+						<p>
+							소개 : 지역별 축제, 여행, 숙박에 대한 정보를 사용자에게 제공하고, 게시판을 이용해 사용자들간의 소통을 돕고, 마이페이지에서 자신의 여행 일정을 짤 수 있는 사이트.
+						</p>
+						<p>
+							역할 : 로그인, 회원가입 등 계정에 관한 부분 및 마이페이지
+						</p>
+						<p>
+							#Java#jQuery#JSP#Servlet#OracleDB
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<a href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FryT3F%2FbtqBqPvXvRg%2FeppKgvhOHls8tbU4J2G2j0%2Fimg.jpg">
+							<img class="center-block" width="600" height="300"
+								src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FryT3F%2FbtqBqPvXvRg%2FeppKgvhOHls8tbU4J2G2j0%2Fimg.jpg"
+								alt="주차 안내 시스템" />
+						</a>
+					</div>
+					<div class="col-sm-6 col-sm-offset-3">
+						<h1>[IoT]주차 안내 시스템</h1>
+						<p>개발 인원 : 1</p>
+						<p>
+							소개 : IoT Kit에 부착된 센서를 통해 앞을 가로막는 물체와의 거리를 측정해 해당 앱 내에서 보여주는 어플.
+						</p>
+						<p>
+							#Raspberry Pi #C
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="contact" class="sec-testimonials"> <!-- sec-contact -->
+			<div class="container">
+				<h1>Hire me</h1>
+
+				<hr />
+
+				<div class="row">
+					<div class="col-sm-4 col-sm-offset-4">
+						<form class="center-block" action="#" method="post">
+							<div class="form-group">
+								<label class="sr-only" for="inputName">Full name</label> <input
+									id="inputName" class="form-control" type="text"
+									value="임세웅" readonly />
+							</div>
+
+							<div class="form-group">
+								<label for="inputMail" class="sr-only">Email Address</label> <input
+									id="inputMail" class="form-control" type="email"
+									placeholder="sterme9@naver.com" readonly />
+							</div>
+							
+							<div class="form-group">
+								<label for="inputPhone" class="sr-only">Phone Number</label> <input
+									id="inputMail" class="form-control" type="text"
+									placeholder="010-8879-9145" readonly />
+							</div>
+
+							<div class="form-group">
+								<label for="inputMessage" class="sr-only">Your Message</label>
+
+								<textarea id="inputMessage" class="form-control" name="message"
+									placeholder="저는 다른 지원자들보다 전반적인 면에서 가장 뛰어난 지원자는 아닙니다. 
+									하지만 원만한 회사 내 생활을 할 수 있는 능력과 주어진 과제를 포기하지 않고 끝까지 해낼 수 있는 끈기를 가지고 있습니다.
+									함께 일할 수 있기를 소망합니다."
+									cols="30" rows="8" readonly></textarea>
+							</div>
+
+							<!-- <div class="form-group">
+								<button class="btn btn-default center-block" type="submit"
+									value="Hire me">Hire me</button>
+							</div> -->
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer id="footer">
+			<div class="container">
+			</div>
+		</footer>
+	</div>
+
+	<script>
+		$(function() {
+			$('.js-nav a, .js-connect').click(function(e) {
+				e.preventDefault();
+				$('body, html').animate({
+					scrollTop : $($.attr(this, 'href')).offset().top
+				}, 750);
+			});
+		});
+	</script>
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
