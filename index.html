@@ -1,4 +1,16 @@
-<div class="wrapper">
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>포트폴리오 - 임세웅</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js">
+	</script>
+	<link rel="stylesheet" href="Portfolio/css/portfolio.css">
+</head>
+
+<body>
+	<div class="wrapper">
 		<header role="header">
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container">
@@ -56,9 +68,9 @@
 
 						<h2 class="h3">프로그래밍</h2>
 
-						<p>프로그래밍 언어는 메모리를 자동으로 관리하는 매니지드 언어(Java), 
+						<p>프로그래밍 언어는 메모리를 자동으로 관리하는 매니지드 언어(Java),
 							그렇지 않은 언 매니지드 언어(C++)로 크게 나눠 두 언어와 객체 지향
-						프로그래밍 위주의 학습을 진행했습니다</p>
+							프로그래밍 위주의 학습을 진행했습니다</p>
 					</div>
 
 					<div class="col-sm-4">
@@ -75,7 +87,7 @@
 
 						<h2 class="h3">백엔드</h2>
 
-						<p>Java 기반으로 백엔드 기술을 익혀 JSP/Servlet와 Oracle DB 연동, Mybatis와 
+						<p>Java 기반으로 백엔드 기술을 익혀 JSP/Servlet와 Oracle DB 연동, Mybatis와
 							Spring 프레임워크를 다룰 수 있습니다.</p>
 					</div>
 				</div>
@@ -87,7 +99,7 @@
 				<h1>Project</h1>
 
 				<hr />
-				
+
 				<a href="https://github.com/WOOOOOOOONG/Project_TravelMaker" style="color: black;">
 					<div class="row">
 						<div class="col-md-6">
@@ -99,7 +111,8 @@
 							<h1>Travel Maker</h1>
 							<p>개발 인원 : 4</p>
 							<p>
-								소개 : 지역별 축제, 여행, 숙박에 대한 정보를 사용자에게 제공하고, 게시판을 이용해 사용자들 간의 소통을 돕고, 마이페이지에서 자신의 여행 일정을 짤 수 있는 사이트.
+								소개 : 지역별 축제, 여행, 숙박에 대한 정보를 사용자에게 제공하고, 게시판을 이용해 사용자들 간의 소통을 돕고, 마이페이지에서 자신의 여행 일정을 짤 수
+								있는 사이트.
 							</p>
 							<p>
 								역할 : 로그인, 회원가입 등 계정에 관한 부분 및 마이페이지
@@ -133,7 +146,8 @@
 		</section>
 
 
-		<section id="contact" class="sec-testimonials"> <!-- sec-contact -->
+		<section id="contact" class="sec-testimonials">
+			<!-- sec-contact -->
 			<div class="container">
 				<h1>Hire me</h1>
 
@@ -143,30 +157,25 @@
 					<div class="col-sm-4 col-sm-offset-4">
 						<form class="center-block" action="#" method="post">
 							<div class="form-group">
-								<label class="sr-only" for="inputName">Full name</label> <input
-									id="inputName" class="form-control" type="text"
-									value="임세웅" readonly />
+								<label class="sr-only" for="inputName">Full name</label> <input id="inputName"
+									class="form-control" type="text" value="임세웅" readonly />
 							</div>
 
 							<div class="form-group">
-								<label for="inputMail" class="sr-only">Email Address</label> <input
-									id="inputMail" class="form-control" type="email"
-									placeholder="sterme9@naver.com" readonly />
+								<label for="inputMail" class="sr-only">Email Address</label> <input id="inputMail"
+									class="form-control" type="email" placeholder="sterme9@naver.com" readonly />
 							</div>
-							
+
 							<div class="form-group">
-								<label for="inputPhone" class="sr-only">Phone Number</label> <input
-									id="inputMail" class="form-control" type="text"
-									placeholder="010-8879-9145" readonly />
+								<label for="inputPhone" class="sr-only">Phone Number</label> <input id="inputMail"
+									class="form-control" type="text" placeholder="010-8879-9145" readonly />
 							</div>
 
 							<div class="form-group">
 								<label for="inputMessage" class="sr-only">Your Message</label>
 
-								<textarea id="inputMessage" class="form-control" name="message"
-									placeholder="다른 지원자들보다 전반적인 면에서 가장 뛰어난 지원자는 아니지만,          원활한 의사소통 능력과 주어진 과제를 포기하지 않고 끝까지 해낼 수 있는 끈기를 가지고 있습니다.
-									유호 전기공업의 한 명의 인재가 되겠습니다."
-									cols="30" rows="8" readonly></textarea>
+								<textarea id="inputMessage" class="form-control" name="message" placeholder="다른 지원자들보다 전반적인 면에서 가장 뛰어난 지원자는 아니지만,          원활한 의사소통 능력과 주어진 과제를 포기하지 않고 끝까지 해낼 수 있는 끈기를 가지고 있습니다.
+									유호 전기공업의 한 명의 인재가 되겠습니다." cols="30" rows="8" readonly></textarea>
 							</div>
 
 							<!-- <div class="form-group">
@@ -186,16 +195,17 @@
 	</div>
 
 	<script>
-		$(function() {
-			$('.js-nav a, .js-connect').click(function(e) {
+		$(function () {
+			$('.js-nav a, .js-connect').click(function (e) {
 				e.preventDefault();
 				$('body, html').animate({
-					scrollTop : $($.attr(this, 'href')).offset().top
+					scrollTop: $($.attr(this, 'href')).offset().top
 				}, 750);
 			});
 		});
 	</script>
-	<link rel="stylesheet"
-		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
