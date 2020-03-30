@@ -4,7 +4,8 @@
 			.pContent {
 				margin: 0 auto;
 			}
-			
+		}
+		@media screen and (max-width: 1000px) {
 			.slider ul li {
 				width: 760px;
 			}
