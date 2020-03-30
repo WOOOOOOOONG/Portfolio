@@ -149,13 +149,13 @@
 			cursor: pointer;
 		}
 
-		@media screen and (max-width: 950px) {
+		@media screen and (max-width: 1200px) {
 			.innerForm {
-				width: 650px;
+				width: 900px;
 			}
 
 			.slider ul li {
-				width: 650px;
-				height: 400px;
+				width: 900px;
+				height: 350px;
 			}
 		}
