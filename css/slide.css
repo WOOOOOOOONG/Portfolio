@@ -9,6 +9,10 @@
 			.slider ul li {
 				width: 760px;
 			}
+			
+			.innerform {
+				width: 760px;	
+			}
 		}
 		section h1 {
 			color: black;
