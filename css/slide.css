@@ -148,3 +148,14 @@
 		#myBtn1, #myBtn2, #myBtn3 {
 			cursor: pointer;
 		}
+
+		@media screen and (max-width: 950px) {
+			.innerForm {
+				width: 650px;
+			}
+
+			.slider ul li {
+				width: 650px;
+				height: 400px;
+			}
+		}
