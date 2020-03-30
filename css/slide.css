@@ -4,6 +4,10 @@
 			.pContent {
 				margin: 0 auto;
 			}
+			
+			.slider ul li {
+				width: 760px;
+			}
 		}
 		section h1 {
 			color: black;
