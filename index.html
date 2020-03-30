@@ -4,13 +4,18 @@
 <head>
 	<meta charset="utf-8">
 	<title>포트폴리오 - 임세웅</title>
-	<script src="https://code.jquery.com/jquery-3.4.1.js">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	</script>
-	<link rel="stylesheet" href="/Portfolio/css/portfolio.css">
+	<link rel="stylesheet" href="css/born.css">
+	<link rel="stylesheet" href="css/about.css">
+	<link rel="stylesheet" href="css/contact.css">
+	<link rel="stylesheet" href="css/slide.css">
+	<link rel="stylesheet" href="css/profile.css">
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="main-wrapper">
+		<!-- header -->
 		<header role="header">
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container">
@@ -21,6 +26,8 @@
 					<div>
 						<ul class="nav navbar-nav navbar-right js-nav" id="js-nav">
 							<li><a href="#home">Home</a></li>
+
+							<li><a href="#intro">Intro</a></li>
 
 							<li><a href="#about">About</a></li>
 
@@ -35,27 +42,244 @@
 			</nav>
 		</header>
 
-		<section id="home" class="sec-main">
-			<h1 class="main-heading" id="main-heading"><br><br>DEVELOPER 임세웅의 포트폴리오</h1>
+		<!-- main -->
+		<section id="home" class="sec-main"><!--id="home" class="sec-main"-->
+			<!-- <h1 class="main-heading" id="main-heading"><br><br>DEVELOPER 임세웅의 포트폴리오</h1> -->
+			<div class="wrapper">
+				<div class="outer-image"><img class="round-image"
+						src="images/profile7.jpg"
+						height="100%"></div>
+				<div class="header"></div>
+			</div>
+			<div id="centerpixel">
+				<div id="Portfolio">
+					<div class="inner">
+						<div class="Portfolio_title" style="width:340px;">
+							임세웅 <br />
+							<p>묵묵히 노력하는 개발자 임세웅입니다</p>
+						</div>
+						<table class="portfolio_content">
+							<tr>
+								<td>나이</td>
+								<td class="one">:</td>
+								<td>24</td>
+							</tr>
+							<tr>
+								<td>학력</td>
+								<td class="one">:</td>
+								<td>서일대학 전문학사</td>
+							</tr>
+							<tr>
+								<td>취미</td>
+								<td class="one">:</td>
+								<td>독서/달리기</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td class="one">&nbsp;</td>
+								<td>2019 서울 JTBC 마라톤 완주</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td class="one">&nbsp;</td>
+								<td>대학 내 도서관 우수이용자 상</td>
+							</tr>
+							<tr>
+								<td>강점</td>
+								<td class="one">:</td>
+								<td>집념</td>
+							</tr>
+							<tr>
+								<td>약점</td>
+								<td class="one">:</td>
+								<td>생각 과다</td>
+							</tr>
+							<tr>
+								<td>기술</td>
+								<td class="one">:</td>
+								<td>C++, Java, Spring</td>
+							</tr>
+							<tr>
+								<td>자격</td>
+								<td class="one">:</td>
+								<td>정보처리산업기사</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td class="one">&nbsp;</td>
+								<td>컴퓨터활용능력 2급</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td class="one">&nbsp;</td>
+								<td>네트워크관리사 2급</td>
+							</tr>
+						</table>
+						<script>
+							try { Typekit.load({ async: true }); } catch (e) { }
+
+							$(function () {
+								function getParameterByName(name, url) {
+									if (!url) {
+										url = window.location.href;
+									}
+									name = name.replace(/[\[\]]/g, "\\$&");
+									var regex = new RegExp("[?&]" + name + "(=([^&#]*)|              &|#|$)"),
+										results = regex.exec(url);
+									if (!results) return null;
+									if (!results[2]) return '';
+									return decodeURIComponent(results[2].replace(/\+/g, " "));
+								}
+								if (getParameterByName('email') == "success") {
+									//make message permanent
+									// alert("Contact was made!\nWe will get back to you as soon as possible.");
+									document.getElementById("mailer").style.pointerEvents = "none";
+									document.getElementById("mailer").style.filter = "blur(2px)";
+									document.getElementById("contactwas").style.display = "block";
+									//clear url
+
+								}
+							});
+						</script>
+					</div>
+				</div>
+			</div>
 		</section>
 
-		<section id="about" class="sec-about">
+		<!-- intro -->
+		<section id="intro" class="sec-about">
 			<div class="container">
-				<h1>About me</h1>
-
+				<h1>소개</h1>
+				<h3 class="section-subheading text-muted" style="text-align: center; margin: 0;">
+				</h3>
 				<hr />
-
 				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3 about">
-						<p>
-							<b>프로그래밍</b> 지식과 <b>웹 프론트엔드</b> 및 <b>백엔드</b> 기술을 배웠으며, 이를 활용할 수 있는 개발자를 지향하는 중입니다.
-							저만의 홈페이지를 만들거나, 프로그래밍 언어로 직접 코딩하는 것을 좋아하고, 가장 좋아하는 언어는 C++입니다.
-							혹시 제게 관심이 있으시다면 <a class="js-connect" href="#footer">저에게 연락</a>해 주시면 감사하겠습니다.
+					<div class="col-sm-5 col-sm-offset-3 about">
+						<p >
+							안녕하세요. 지원자 <b>임세웅</b>이라고 합니다. <br>저는 프로그래밍을 하면서 늘 저의 기술이 실제 업계에서 사용되기를 바라면서
+							하루하루 프로그래밍을 해왔습니다.<br>
+							그리고 드디어 학원과 학교를 졸업하고 바라던 실무에 투입될 예정입니다.<br>
+							늘 바라왔던 일이니만큼 <b>열정</b>을 가지고 회사에 이바지하도록 하겠습니다. 감사합니다.
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
+
+		<!-- About Section -->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h1>About</h1>
+						<h3 class="section-subheading text-muted" style="text-align: center; margin: 0;">
+						</h3>
+					<hr /><br><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<ul class="timeline">
+							<li>
+								<div class="timeline-image">
+									<img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+									<h4>2015년</h4>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-body">
+										<p class="text-muted">
+											<br>
+											2015년 03월 서일대학<br>
+											정보통신공학과 입학
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted">
+								<div class="timeline-image">
+									<img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+									<h4>2016년</h4>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-body">
+										<p class="text-muted">
+											<br>
+											정보처리기능사 취득<br>
+											컴퓨터활용능력 2급 취득<br>
+											네트워크관리사 2급 취득<br>
+											C, C++ 및 자료구조 기초 공부
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="timeline-image">
+									<img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+									<h4>2017~2018년 초</h4>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-body">
+										<p class="text-muted">
+											<br><br>
+											군 복무
+										</p>
+									</div>
+								</div>
+							</li class="timeline-inverted">
+							<li class="timeline-inverted">
+								<div class="timeline-image">
+									<img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+									<h4>2019년 초</h4>
+								</div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h4>[학원]C++ 언매니지드 프로그래밍</h4>
+										<h4 class="subheading"></h4>
+									</div>
+									<div class="timeline-body">
+										<p class="text-muted">
+											교육 기관: Pocu Academy<br>
+											교육 기간: 2019-01-04 ~ 2019-04-14<br>
+											교육 내용: Core, C++, Modern C++, C++11/14/17 학습 및 활용을 위한 과제 제출<br><br>
+											정보처리산업기사 취득
+										</p>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="timeline-image">
+									<img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+									<h4>2019년 중~2020년</h4>
+								</div>
+								<div class="timeline-panel" style="text-align: left;">
+									<div class="timeline-heading">
+										<h4>[학원]UIUX 엔지니어링 및 <br>응용SW엔지니어링 양성과정</h4>
+										<h4 class="subheading"></h4>
+									</div>
+									<div class="timeline-body">
+										<p class="text-muted">
+											교육 기관: KH 정보교육원<br>
+											교육 기간: 2019-07-18 ~ 2020-04-02<br>
+											교육 내용: Java 기반 웹 개발에 요구되는 전체 과정에 대한 교육 및 2회의 팀 프로젝트를 통한 실제 프로젝트 경험<br><br>
+											서일대학 졸업
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="timeline-inverted">
+								<div class="timeline-image">
+									<h4>
+										<br>
+										<br></h4>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- skills -->
 		<section id="services" class="sec-services">
 			<div class="container">
 				<h1>Skills</h1>
@@ -68,9 +292,11 @@
 
 						<h2 class="h3">프로그래밍</h2>
 
-						<p>프로그래밍 언어를 메모리를 자동으로 관리하는 매니지드 언어(Java),
-							그렇지 않은 언 매니지드 언어(C++)로 크게 나눠 두 언어와 객체 지향
-							프로그래밍 위주의 학습을 진행했습니다</p>
+						<p>
+							C<br>
+							C++<br>
+							Java<br>
+						</p>
 					</div>
 
 					<div class="col-sm-4">
@@ -78,8 +304,13 @@
 
 						<h2 class="h3">프론트엔드</h2>
 
-						<p>HTML, css, Javascript, Jquery, Bootstrap 등의 기술로 사용자에게 보이는
-							웹사이트 UI 부분을 꾸미기 위한 기술 능력을 갖고 있습니다.</p>
+						<p>
+							HTML5<br>
+							CSS6<br>
+							Javascript ES6<br>
+							jQuery<br>
+							EL/JSTL
+						</p>
 					</div>
 
 					<div class="col-sm-4">
@@ -87,107 +318,295 @@
 
 						<h2 class="h3">백엔드</h2>
 
-						<p>Java 기반으로 백엔드 기술을 익혀 JSP/Servlet와 Oracle DB 연동, Mybatis와
-							Spring 프레임워크를 다룰 수 있습니다.</p>
+						<p>
+							JSP/Servlet<br>
+							Oracle DB<br>
+							Mybatis<br>
+							Spring<br>
+						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<!-- 교육/자격증 -->
+		<!-- <section id="services" class="sec-services">
+			<div class="container">
+				<h1>교육 및 보유 자격증</h1>
+
+				<hr />
+
+				<div class="row">
+					<div class="col-sm-4">
+						<i class="fa fa-4x fa-paint-brush"></i>
+
+						<h2 class="h3">C++ 언매니지드 프로그래밍</h2>
+
+						<p>
+							기간: 2019-01-04 ~ 2019-04-14<br>
+							교육기관 : Pocu Academy <br>
+							교육내용 : Core C++, Modern C++, C++11/14/17 학습 및 활용을 위한 과제 제출
+						</p>
+					</div>
+
+					<div class="col-sm-4">
+						<i class="fa fa-4x fa-code"></i>
+
+						<h2 class="h3">[NCS]UIUX 엔지니어링 및 SW엔지니어링 양성과정</h2>
+
+						<p>기간: 2019-07-18 ~ 2020-04-02<br>
+							교육기관 : KH 정보교육원 <br>
+							교육내용 : Java 기반 웹 개발에 있어 필요한 프로그래밍 언어들과 지식 기반의 교육 및 2회의 팀 프로젝트로 인한 실습</p>
+					</div>
+
+					<div class="col-sm-4">
+						<i class="fa fa-4x fa-tablet"></i>
+
+						<h2 class="h3">보유 자격</h2>
+
+						<p>
+							정보처리산업기사<br><br>
+							컴퓨터활용능력 2급
+						</p>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<!-- 프로젝트 -->
 		<section id="folio" class="sec-folio">
 			<div class="container">
 				<h1>Project</h1>
 
 				<hr />
 
-				<a href="https://github.com/WOOOOOOOONG/Project_TravelMaker" style="color: black;">
+				<div id="myBtn1" style="color: black;">
 					<div class="row">
 						<div class="col-md-6">
 							<img class="center-block"
-								src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2Fb4FduG%2FbtqBrmUChFo%2FpuFZl3XnzlUKTZSAczeMl0%2Fimg.png"
+								src="images/travel.png"
 								alt="Introduce Travel" />
 						</div>
-						<div class="col-sm-6 col-sm-offset-3">
+						<div class="col-sm-6 col-sm-offset-3 pContent">
 							<h1>Travel Maker</h1>
 							<p>개발 인원 : 4</p>
 							<p>
 								소개 : 지역별 축제, 여행, 숙박에 대한 정보를 사용자에게 제공하고, 게시판을 이용해 사용자들 간의 소통을 돕고, 마이페이지에서 자신의 여행 일정을 짤 수
-								있는 사이트.
+								있는 사이트.<br>
+								기간: 2019/11 ~ 2019/12/27
 							</p>
 							<p>
-								역할 : 계정 관리(회원가입,로그인,ID/PWD 찾기)와 마이페이지(일정관리,내가 쓴 게시글 조회,회원정보 수정,문의내역)
+								역할 : 계정 관리와 마이페이지 및 일정관리
 							</p>
 							<p>
-								#Java#jQuery#JSP#Servlet#OracleDB
+								#Java#jQuery#JSP#Servlet#OracleDB<br>
 							</p>
 						</div>
 					</div>
-				</a>
-				<a href="https://github.com/WOOOOOOOONG/Portfolio" style="color: black;">
+				</div>			
+				<a href="https://github.com/WOOOOOOOONG/Project_TravelMaker" style="position: absolute; margin-top: -50px">https://github.com/WOOOOOOOONG/Project_TravelMaker</a>	
+				<div id="myBtn2" style="color: black;">
 					<div class="row">
 						<div class="col-md-6">
 							<img class="center-block" width="600" height="300"
-								src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FryT3F%2FbtqBqPvXvRg%2FeppKgvhOHls8tbU4J2G2j0%2Fimg.jpg"
-								alt="주차 안내 시스템" />
+								src="images/mainpage.png"
+								alt="영단어 사이트" />
 						</div>
-						<div class="col-sm-6 col-sm-offset-3">
-							<h1>[IoT]주차 안내 시스템</h1>
-							<p>개발 인원 : 1</p>
+						<div class="col-sm-6 col-sm-offset-3 pContent">
+							<h1>영단어 암기 사이트</h1>
+							<p>개발 인원 : 4</p>
 							<p>
-								소개 : IoT Kit에 부착된 센서를 통해 앞을 가로막는 물체와의 거리를 측정해 해당 앱 내에서 보여주는 어플.
+								소개 : 온라인 환경에서 자신만의 단어장을 만들고, 공유하고, 공통의 목표를 가진 사람들과 함께 목표를 향해
+								정진할 수 있도록 돕기 위한 사이트<br>
+								기간 : 2019/2/17 ~ 2020/4/2
 							</p>
 							<p>
-								#Raspberry Pi #C
+								역할 : 초기 페이지, 메인 페이지, 관리자 페이지 및 통계, 커뮤니티 게시판, 문의사항에 대한 모든 처리
+							</p>
+							<p>
+								#Java #Front-end #Back-end #Spring #MyBatis<br>
 							</p>
 						</div>
 					</div>
-				</a>
+				</div>
+				<a href="https://github.com/WOOOOOOOONG/It-Where-Project" style="position: absolute; margin-top: -50px">https://github.com/WOOOOOOOONG/It-Where-Project</a>
+				<div id="myBtn3" style="color: black;">
+					<div class="row">
+						<div class="col-md-6">
+							<img class="center-block" width="600" height="300" src="images/몬스터 - 슬라임.png"
+								alt="주차 안내 시스템" />
+						</div>
+						<div class="col-sm-6 col-sm-offset-3 pContent">
+							<h1>웅이의 모험</h1>
+							<p>개발 인원 : 1</p>
+							<p>
+								소개 : 오로지 Console만 사용하여 게임 화면을 나타내며, MVC 패턴을 사용해
+								적을 무찌르고 용사가 성장해 나가는 게임
+							</p>
+							<p>
+								#C++<br>
+							</p>
+						</div>
+					</div>
+				</div>
+				<a href='https://github.com/WOOOOOOOONG/Woongs-Adventure' style="position: absolute; margin-top: -50px">https://github.com/WOOOOOOOONG/Woongs-Adventure</a>
+				
+				<div id="myModal1" class="modal">
+					<div class="innerForm">
+						<span class="close">&times;</span>
+						<h1 style="background: white">Tavel Maker</h1>
+						<div class="slider slider1 modal-content">
+							<a class="control_next" style="color: white;">&gt;</a>
+							<a class="control_prev" style="color: white;">&lt;</a>
+							<ul>
+								<li style="background-image: url('images/TravelMaker/1.png');"></li>
+								<li style="background-image: url('images/TravelMaker/2.png');"></li>
+								<li style="background-image: url('images/TravelMaker/3.png');"></li>
+								<li style="background-image: url('images/TravelMaker/4.png');"></li>
+								<li style="background-image: url('images/TravelMaker/5.png');"></li>
+								<li style="background-image: url('images/TravelMaker/6.png');"></li>
+								<li style="background-image: url('images/TravelMaker/7.png');"></li>
+								<li style="background-image: url('images/ppt끝.png');"></li>
+							</ul>
+						</div>
+
+						<div class="slider_option">
+							<input type="checkbox" id="checkbox">
+							<label for="checkbox">Auto Slide</label>
+						</div>
+					</div>
+				</div>
+				<div id="myModal2" class="modal">
+					<div class="innerForm">
+						<span class="close">&times;</span>
+						<h1 style="background: white">SEW</h1>
+						<div class="slider slider2 modal-content">
+							<a class="control_next" style="color: white;">&gt;</a>
+							<a class="control_prev" style="color: white;">&lt;</a>
+							<ul>
+								<li style="background-image: url('images/SEW/1.png');"></li>
+								<li style="background-image: url('images/SEW/2.png');"></li>
+								<li style="background-image: url('images/SEW/3.png');"></li>
+								<li style="background-image: url('images/SEW/4.png');"></li>
+								<li style="background-image: url('images/SEW/5.png');"></li>
+								<li style="background-image: url('images/SEW/6.png');"></li>
+								<li style="background-image: url('images/SEW/7.png');"></li>
+								<li style="background-image: url('images/ppt끝.png');"></li>
+							</ul>
+						</div>
+
+						<div class="slider_option">
+							<input type="checkbox" id="checkbox">
+							<label for="checkbox">Auto Slide</label>
+						</div>
+					</div>
+				</div>
+				<div id="myModal3" class="modal">
+					<div class="innerForm">
+						<span class="close">&times;</span>
+						<h1 style="background: white">웅이의 모험</h1>
+						<div class="slider slider3 modal-content">
+							<a class="control_next" style="color: white;">&gt;</a>
+							<a class="control_prev" style="color: white;">&lt;</a>
+							<ul>
+								<li style="background-image: url('images/WoongsAdventure/1.png');"></li>
+								<li style="background-image: url('images/WoongsAdventure/2.png');"></li>
+								<li style="background-image: url('images/WoongsAdventure/3.png');"></li>
+								<li style="background-image: url('images/WoongsAdventure/4.png');"></li>
+								<li style="background-image: url('images/WoongsAdventure/5.png');"></li>
+								<li style="background-image: url('images/WoongsAdventure/6.png');"></li>
+								<li style="background-image: url('images/WoongsAdventure/7.png');"></li>
+								<li style="background-image: url('images/WoongsAdventure/8.png');"></li>
+								<li style="background-image: url('images/ppt끝.png');"></li>
+							</ul>
+						</div>
+
+						<div class="slider_option">
+							<input type="checkbox" id="checkbox">
+							<label for="checkbox">Auto Slide</label>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
-
+		<!-- 연락 -->
 		<section id="contact" class="sec-testimonials">
 			<!-- sec-contact -->
 			<div class="container">
-				<h1>Hire me</h1>
+				<h1>Contact</h1>
 
 				<hr />
 
 				<div class="row">
-					<div class="col-sm-4 col-sm-offset-4">
+					<div class="col-sm-8 col-sm-offset-4">
 						<form class="center-block" action="#" method="post">
-							<div class="form-group">
-								<label class="sr-only" for="inputName">Full name</label> <input id="inputName"
-									class="form-control" type="text" value="임세웅" readonly />
+							<div id="form-main">
+								<div id="form-div">
+									<form class="form" id="form1">
+										<p class="email">
+											<input name="email" type="text"
+												class="validate[required,custom[email]] feedback-input" id="email"
+												placeholder="Email" />
+										</p>
+
+										<p class="name">
+											<input name="title" type="text"
+												class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+												placeholder="Title" id="name" />
+										</p>
+
+
+										<p class="text">
+											<textarea name="text"
+												class="validate[required,length[6,300]] feedback-input" id="comment"
+												placeholder="Comment"></textarea>
+										</p>
+
+
+										<div class="submit">
+											<input type="button" value="SEND" id="button-blue" onclick="sendMail()" />
+											<div class="ease"></div>
+										</div>
+									</form>
+								</div>
 							</div>
 
-							<div class="form-group">
-								<label for="inputMail" class="sr-only">Email Address</label> <input id="inputMail"
-									class="form-control" type="email" placeholder="sterme9@naver.com" readonly />
-							</div>
+							<script>
+								function sendMail() {
+									var email = document.getElementById('email');
+									var title = document.getElementById('name');
+									var content = document.getElementById('comment');
+									var mail = document.getElementsByClassName('mail');
+									mail = mail[0];
 
-							<div class="form-group">
-								<label for="inputPhone" class="sr-only">Phone Number</label> <input id="inputMail"
-									class="form-control" type="text" placeholder="010-8879-9145" readonly />
-							</div>
+									if (email.value != "" && title.value != "" && content.value != "") {
+										var str = "mailto: " + email.value + "?subject=" + title.value + "&body=" + content.value;
+										location.href = str;
+									} else {
+										if (email.value == "") {
+											alert('이메일을 입력해주세요');
+											email.focus();
+										} else if (title.value == "") {
+											alert('제목을 입력해주세요');
+											title.focus();
+										} else if (content.value == "") {
+											alert('내용을 입력해주세요');
+											content.focus();
+										}
+									}
 
-							<div class="form-group">
-								<label for="inputMessage" class="sr-only">Your Message</label>
-
-								<textarea id="inputMessage" class="form-control" name="message" placeholder="다른 지원자들보다 전반적인 면에서 가장 뛰어난 지원자는 아니지만, 원활한 의사소통 능력과 주어진 과제를 포기하지 않고 끝까지 해낼 수 있는 끈기를 가지고 있습니다.
-							회사의 한 명의 구성원으로서 훌륭한 인재가 되겠습니다." cols="30" rows="8" readonly></textarea>
-							</div>
-
-							<!-- <div class="form-group">
-								<button class="btn btn-default center-block" type="submit"
-									value="Hire me">Hire me</button>
-							</div> -->
+									// window.open(str2);
+									// "mailto: sterme9@naver.com?&amp;subject=하이!&amp;body=큭큭"
+								}
+							</script>
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
 
+		<!-- footer -->
 		<footer id="footer">
 			<div class="container">
 			</div>
@@ -203,6 +622,166 @@
 				}, 750);
 			});
 		});
+
+		jQuery(document).ready(function ($) {
+
+			$('#checkbox').change(function () {
+				setInterval(function () {
+					moveRight();
+				}, 500);
+			});
+
+			var slideCount1 = $('.slider1 ul li').length;
+			var slideWidth1 = $('.slider1 ul li').width();
+			var slideHeight1 = $('.slider1 ul li').height();
+			var sliderUlWidth1 = slideCount1 * slideWidth1;
+
+			var slideCount2 = $('.slider2 ul li').length;
+			var slideWidth2 = $('.slider2 ul li').width();
+			var slideHeight2 = $('.slider2 ul li').height();
+			var sliderUlWidth2 = slideCount2 * slideWidth2;
+
+			var slideCount3 = $('.slider3 ul li').length;
+			var slideWidth3 = $('.slider3 ul li').width();
+			var slideHeight3 = $('.slider3 ul li').height();
+			var sliderUlWidth3 = slideCount3 * slideWidth3;
+
+			$('.slider1').css({ width: slideWidth1, height: slideHeight1 });
+			$('.slider1 ul').css({ width: sliderUlWidth1, marginLeft: - slideWidth1 });
+			$('.slider1 ul li:last-child').prependTo('.slider1 ul');
+
+			$('.slider2').css({ width: slideWidth2, height: slideHeight2 });
+			$('.slider2 ul').css({ width: sliderUlWidth2, marginLeft: - slideWidth2 });
+			$('.slider2 ul li:last-child').prependTo('.slider2 ul');
+
+			$('.slider3').css({ width: slideWidth3, height: slideHeight3 });
+			$('.slider3 ul').css({ width: sliderUlWidth3, marginLeft: - slideWidth3 });
+			$('.slider3 ul li:last-child').prependTo('.slider3 ul');
+
+			function moveLeft1() {
+				$('.slider1 ul').animate({
+					left: + slideWidth1
+				}, 200, function () {
+					$('.slider1 ul li:last-child').prependTo('.slider1 ul');
+					$('.slider1 ul').css('left', '');
+				});
+			};
+			function moveRight1() {
+				$('.slider1 ul').animate({
+					left: - slideWidth1
+				}, 200, function () {
+					$('.slider1 ul li:first-child').appendTo('.slider1 ul');
+					$('.slider1 ul').css('left', '');
+				});
+			};
+
+			function moveLeft2() {
+				$('.slider2 ul').animate({
+					left: + slideWidth2
+				}, 200, function () {
+					$('.slider2 ul li:last-child').prependTo('.slider2 ul');
+					$('.slider2 ul').css('left', '');
+				});
+			};
+			function moveRight2() {
+				$('.slider2 ul').animate({
+					left: - slideWidth2
+				}, 200, function () {
+					$('.slider2 ul li:first-child').appendTo('.slider2 ul');
+					$('.slider2 ul').css('left', '');
+				});
+			};
+
+			function moveLeft3() {
+				$('.slider3 ul').animate({
+					left: + slideWidth3
+				}, 200, function () {
+					$('.slider3 ul li:last-child').prependTo('.slider3 ul');
+					$('.slider3 ul').css('left', '');
+				});
+			};
+			function moveRight3() {
+				$('.slider3 ul').animate({
+					left: - slideWidth3
+				}, 200, function () {
+					$('.slider3 ul li:first-child').appendTo('.slider3 ul');
+					$('.slider3 ul').css('left', '');
+				});
+			};
+
+			$('.slider1 a.control_prev').click(function () {
+				moveLeft1();
+			});
+			$('.slider1 a.control_next').click(function () {
+				moveRight1();
+			});
+
+			$('.slider2 a.control_prev').click(function () {
+				moveLeft2();
+			});
+
+			$('.slider2 a.control_next').click(function () {
+				moveRight2();
+			});
+
+			$('.slider3 a.control_prev').click(function () {
+				moveLeft3();
+			});
+
+			$('.slider3 a.control_next').click(function () {
+				moveRight3();
+			});
+
+		});
+
+		// Get the modal
+		var modal = document.getElementsByClassName('modal');
+		var modal1 = modal[0];
+		var modal2 = modal[1];
+		var modal3 = modal[2];
+
+		// Get the button that opens the modal
+		var btn1 = document.getElementById("myBtn1");
+		var btn2 = document.getElementById("myBtn2");
+		var btn3 = document.getElementById("myBtn3");
+
+		// Get the <span> element that closes the modal
+		var span1 = document.getElementsByClassName("close")[0];
+		var span2 = document.getElementsByClassName("close")[1];
+		var span3 = document.getElementsByClassName("close")[2];
+
+		// When the user clicks on the button, open the modal 
+		btn1.onclick = function () {
+			modal[0].style.display = "block";
+		}
+		btn2.onclick = function () {
+			modal[1].style.display = "block";
+		}
+		btn3.onclick = function () {
+			modal[2].style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span1.onclick = function () {
+			modal[0].style.display = "none";
+		}
+		span2.onclick = function () {
+			modal[1].style.display = "none";
+		}
+		span3.onclick = function () {
+			modal[2].style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal[0]) {
+				modal[0].style.display = "none";
+			} else if (event.target == modal[1]) {
+				modal[1].style.display = "none";
+			} else if (event.target == modal[2]) {
+				modal[2].style.display = "none";
+			}
+		}
 	</script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
