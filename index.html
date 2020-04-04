@@ -454,7 +454,7 @@
 				<div id="myModal1" class="modal">
 					<div class="innerForm">
 						<span class="close" style="font-size: 50px; margin-top: -7px;">&times;</span>
-						<h1 style="background: white">Tavel Maker</h1>
+						<h1 style="background: white"><p id="page1" style="float:left; text-align:left; font-size: 25px;">(1/23)</p>Tavel Maker</h1>
 						<div class="slider slider1 modal-content">
 							<a class="control_next" style="color: white;">&gt;</a>
 							<a class="control_prev" style="color: white;">&lt;</a>
@@ -494,7 +494,7 @@
 				<div id="myModal2" class="modal">
 					<div class="innerForm">
 						<span class="close" style="font-size: 50px; margin-top: -7px;">&times;</span>
-						<h1 style="background: white">SEW</h1>
+						<h1 style="background: white"><p id="page2" style="float:left; text-align:left; font-size: 25px;">(1/34)</p>SEW</h1>
 						<div class="slider slider2 modal-content">
 							<a class="control_next" style="color: white;">&gt;</a>
 							<a class="control_prev" style="color: white;">&lt;</a>
@@ -545,7 +545,7 @@
 				<div id="myModal3" class="modal">
 					<div class="innerForm">
 						<span class="close" style="font-size: 50px; margin-top: -7px;">&times;</span>
-						<h1 style="background: white">웅이의 모험</h1>
+						<h1 style="background: white"><p id="page3" style="float:left; text-align:left; font-size: 25px;">(1/9)</p>웅이의 모험</h1>
 						<div class="slider slider3 modal-content">
 							<a class="control_next" style="color: white;">&gt;</a>
 							<a class="control_prev" style="color: white;">&lt;</a>
@@ -665,6 +665,13 @@
 		});
 
 		jQuery(document).ready(function ($) {
+			var page1 = document.getElementById('page1');
+			var page2 = document.getElementById('page2');
+			var page3 = document.getElementById('page3');
+			var curPage1 = 1;
+			var curPage2 = 1;
+			var curPage3 = 1;
+
 
 			$('#checkbox').change(function () {
 				setInterval(function () {
@@ -700,6 +707,12 @@
 			$('.slider3 ul li:last-child').prependTo('.slider3 ul');
 
 			function moveLeft1() {
+				if(curPage1 > 1) {
+					curPage1 = curPage1 - 1;
+				}else {
+					curPage1 = 23;
+				}
+				page1.innerText = "(" + curPage1 + "/23)";
 				$('.slider1 ul').animate({
 					left: + slideWidth1
 				}, 200, function () {
@@ -708,6 +721,12 @@
 				});
 			};
 			function moveRight1() {
+				if(curPage1 < 23) {
+					curPage1 = curPage1 + 1;
+				}else {
+					curPage1 = 1;
+				}
+				page1.innerText = "(" + curPage1 + "/23)";
 				$('.slider1 ul').animate({
 					left: - slideWidth1
 				}, 200, function () {
@@ -717,6 +736,12 @@
 			};
 
 			function moveLeft2() {
+				if(curPage2 > 1) {
+					curPage2 = curPage2 - 1;
+				}else {
+					curPage2 = 34;
+				}
+				page2.innerText = "(" + curPage2 + "/34)";
 				$('.slider2 ul').animate({
 					left: + slideWidth2
 				}, 200, function () {
@@ -725,6 +750,12 @@
 				});
 			};
 			function moveRight2() {
+				if(curPage2 < 34) {
+					curPage2 = curPage2 + 1;
+				}else {
+					curPage2 = 1;
+				}
+				page2.innerText = "(" + curPage2 + "/34)";
 				$('.slider2 ul').animate({
 					left: - slideWidth2
 				}, 200, function () {
@@ -734,6 +765,13 @@
 			};
 
 			function moveLeft3() {
+				if(curPage3 > 1) {
+					curPage3 = curPage3 - 1;
+				}else {
+					curPage3 = 9;
+				}
+				page3.innerText = "(" + curPage3 + "/9)";
+
 				$('.slider3 ul').animate({
 					left: + slideWidth3
 				}, 200, function () {
@@ -742,6 +780,13 @@
 				});
 			};
 			function moveRight3() {
+				if(curPage3 < 9) {
+					curPage3 = curPage3 + 1;
+				}else {
+					curPage3 = 1;
+				}
+				page3.innerText = "(" + curPage3 + "/9)";
+
 				$('.slider3 ul').animate({
 					left: - slideWidth3
 				}, 200, function () {
