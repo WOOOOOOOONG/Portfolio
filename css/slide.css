@@ -41,7 +41,7 @@
 			line-height: 300px;
 		}
 
-		.row:hover {
+		#myBtn1, #myBtn2, #myBtn3 {
 			-webkit-background-filter: blur(2px);
 			-moz-background-filter: blur(2px);
 			-ms-background-filter: blur(2px);
