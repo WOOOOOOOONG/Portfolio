@@ -41,6 +41,14 @@
 			line-height: 300px;
 		}
 
+		.row:hover {
+			-webkit-background-filter: blur(2px);
+			-moz-background-filter: blur(2px);
+			-ms-background-filter: blur(2px);
+			-o-background-filter: blur(2px);
+			filter: blur(2px);
+		}
+
 		.control_prev,
 		.control_next {
 			position: absolute;
