@@ -715,7 +715,7 @@ a:hover{color:var(--accent-muted)}
 
       <div class="project-card">
         <div class="proj-header">
-          <div class="proj-title">1. 출고 관리 Procedure 성능 개선 — 91% 단축</div>
+          <div class="proj-title">1. 매출 집계 Procedure 성능 개선 — 91% 단축</div>
           <div class="proj-role">진단·리팩토링 · 2021.06</div>
         </div>
         <div class="proj-stack">
@@ -723,7 +723,7 @@ a:hover{color:var(--accent-muted)}
           <span class="tag tag-teal">Materialized View</span>
           <span class="tag tag-blue">Pro*C</span>
         </div>
-        <div class="proj-context">ERP 일별 출고 집계 Procedure가 115초 걸려 타임아웃이 잦던 문제를 실행 계획 분석과 Materialized View 도입으로 10초로 단축.</div>
+        <div class="proj-context">ERP 매출 집계 Procedure가 115초 걸려 타임아웃이 잦던 문제를 실행 계획 분석과 Materialized View 도입으로 10초로 단축.</div>
         <p style="font-size:13.5px;color:var(--text-secondary);line-height:1.8;margin-bottom:14px;">원인이 명확하지 않다는 이유로 6개월 이상 수동 재실행·배치 윈도우 확장 등 임시 대응이 반복되던 상황. 1,700줄 Procedure를 단계별로 끊어 EXPLAIN PLAN을 따라간 결과, 반복 집계와 불필요한 Join이 핵심 원인이었음.</p>
         <ul>
           <li>반복 집계 부분을 Materialized View로 분리하고 MV에 인덱스 추가</li>
