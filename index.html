@@ -587,7 +587,7 @@ a:hover{color:var(--accent-muted)}
           <span class="tag tag-teal">OpenSearch</span>
           <span class="tag tag-purple">MySQL 8.0</span>
         </div>
-        <div class="proj-context">프롭테크 핵심 API(지도·매물상세·매물관리)의 속도 이슈가 반복 리포트되었으나 쿼리 튜닝·인덱스 개선 등 부분 최적화로는 한계. 기존 OpenSearch Serverless 인프라를 활용해 추가 고정비 없이 근본 개선을 설계·진행 중.</div>
+        <div class="proj-context">프롭테크 핵심 API(지도·매물상세·매물관리)의 속도 이슈가 반복 리포트되었으나 쿼리 튜닝·인덱스 개선 등 부분 최적화로는 한계. API별 특성에 따라 전략을 분리해 근본 개선을 설계·진행 중.</div>
         <ul>
           <li>실시간성 요구에 따라 전략 분리 — 지도 API는 OpenSearch, 매물 상세·관리는 DB 조회 최적화</li>
           <li>기존 OpenSearch Serverless 비용 분석 — 추가 고정비 없이 도입 가능 확인</li>
