@@ -202,6 +202,24 @@ a:hover{color:var(--accent-muted)}
   font-size:19px;
   font-weight:600;
   margin-bottom:2px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.company-link{
+  display:inline-flex;align-items:center;gap:4px;
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:500;
+  color:var(--accent);
+  padding:3px 10px;
+  border:1px solid var(--border);
+  border-radius:99px;
+  transition:background .2s,border-color .2s;
+  text-decoration:none;
+  white-space:nowrap;
+}
+.company-link:hover{
+  background:var(--accent-light);
+  border-color:var(--accent);
 }
 .tl-company-role{
   font-size:14px;
@@ -352,6 +370,14 @@ a:hover{color:var(--accent-muted)}
   font-size:16px;
   font-weight:600;
 }
+.side-card .side-name a{
+  color:var(--text-primary);
+  text-decoration:none;
+  transition:color .2s;
+}
+.side-card .side-name a:hover{
+  color:var(--accent);
+}
 .side-card .side-status{
   font-family:var(--font-mono);
   font-size:11px;
@@ -479,13 +505,15 @@ a:hover{color:var(--accent-muted)}
     <div class="contact-row animate delay-3">
       <a href="mailto:sterme92@gmail.com">sterme92@gmail.com</a>
       <span>·</span>
-      <span style="color:var(--text-tertiary)">010-8879-9145</span>
+      <span style="color:var(--text-secondary)">010-8879-9145</span>
       <span>·</span>
-      <span style="color:var(--text-tertiary)">인천광역시 서구</span>
+      <span style="color:var(--text-secondary)">인천광역시 서구</span>
       <span>·</span>
       <a href="https://github.com/WOOOOOOOONG" target="_blank">GitHub</a>
       <span>·</span>
       <a href="https://velog.io/@woooooooong" target="_blank">Velog</a>
+      <span>·</span>
+      <a href="https://readerr.tistory.com/" target="_blank">Tistory</a>
     </div>
   </div>
 </header>
@@ -504,7 +532,7 @@ a:hover{color:var(--accent-muted)}
   <div class="skills-grid">
     <div class="skill-card">
       <div class="label">Language</div>
-      <div class="items">PHP 8.x · Java 21 · Python 3.12</div>
+      <div class="items">PHP 7.1/8.4 · Java 21 · Python 3.12</div>
     </div>
     <div class="skill-card">
       <div class="label">Framework</div>
@@ -512,7 +540,7 @@ a:hover{color:var(--accent-muted)}
     </div>
     <div class="skill-card">
       <div class="label">Database</div>
-      <div class="items">MySQL 8.0 · Redis · Oracle</div>
+      <div class="items">MySQL 5.6/8.0 · Redis · Oracle</div>
     </div>
     <div class="skill-card">
       <div class="label">Search</div>
@@ -538,7 +566,7 @@ a:hover{color:var(--accent-muted)}
     <div class="tl-company">
       <div class="tl-dot"></div>
       <div class="tl-period">2023.03 — 현재</div>
-      <div class="tl-company-name">(주)두꺼비세상 · 피터팬의 좋은방구하기 사업부</div>
+      <div class="tl-company-name">(주)두꺼비세상 · 피터팬의 좋은방구하기 사업부 <a class="company-link" href="https://www.peterpanz.com/" target="_blank">peterpanz.com ↗</a></div>
       <div class="tl-company-role">개발팀 매니저 · 부동산 중개 플랫폼 (PropTech)</div>
       <p class="tl-company-desc">매물·지도 등 프롭테크 핵심 도메인부터 결제·검색·외부 연동까지 800만+ 건 규모의 서비스를 운영. PHP/Laravel 메인 모놀리식 위에 Java/Spring Boot, Python/FastAPI 기반 마이크로서비스를 분리·구축하며 시스템 구조를 확장해 왔으며, 169건+의 Confluence 기술 문서로 핵심 비즈니스 로직과 의사결정을 팀 자산화.</p>
 
@@ -676,7 +704,7 @@ a:hover{color:var(--accent-muted)}
     <div class="tl-company">
       <div class="tl-dot secondary"></div>
       <div class="tl-period secondary">2020.06 — 2022.08</div>
-      <div class="tl-company-name">후지쯔코리아 솔루션서비스</div>
+      <div class="tl-company-name">후지쯔코리아 솔루션서비스 <a class="company-link" href="https://global.fujitsu/ko-kr/subsidiaries" target="_blank">fujitsu.com ↗</a></div>
       <div class="tl-company-role">백엔드 개발자 · SI / 솔루션 개발</div>
 
       <div class="project-card">
@@ -722,7 +750,7 @@ a:hover{color:var(--accent-muted)}
   <div class="side-grid">
     <div class="side-card">
       <div class="side-header">
-        <div class="side-name">SmokingMap</div>
+        <div class="side-name"><a href="https://smoking-map.com/" target="_blank">SmokingMap</a></div>
         <span class="side-status status-live">운영 중</span>
       </div>
       <a class="side-url" href="https://smoking-map.com" target="_blank">smoking-map.com</a>
@@ -743,7 +771,7 @@ a:hover{color:var(--accent-muted)}
 
     <div class="side-card">
       <div class="side-header">
-        <div class="side-name">realty-yield</div>
+        <div class="side-name"><a href="https://realty-yield.com/" target="_blank">realty-yield</a></div>
         <span class="side-status status-live">운영 중</span>
       </div>
       <a class="side-url" href="https://realty-yield.com" target="_blank">realty-yield.com</a>
@@ -761,29 +789,10 @@ a:hover{color:var(--accent-muted)}
       </ul>
     </div>
 
-    <div class="side-card">
-      <div class="side-header">
-        <div class="side-name">LevelRoad (평지로드)</div>
-        <span class="side-status status-wip">WIP</span>
-      </div>
-      <div class="proj-stack">
-        <span class="tag tag-blue">React 19</span>
-        <span class="tag tag-blue">TypeScript</span>
-        <span class="tag tag-amber">Express</span>
-        <span class="tag tag-teal">gdal-async</span>
-        <span class="tag tag-teal">Gemini</span>
-      </div>
-      <p class="side-desc">부동산 임장 보조 도구로 시작했지만, 같은 데이터가 유모차·휠체어·노약자에게 일상의 안전 문제임을 알고 두 페르소나 모두를 만족시키는 컨셉으로 잡았습니다.</p>
-      <ul>
-        <li>풀스택 TypeScript — 프론트와 백엔드가 좌표·고도·경로 타입 공유</li>
-        <li>Local DEM (gdal-async) + VWorld API 폴백 — 호출부는 출처를 모름</li>
-        <li>경로 일괄 조회 API (최대 512포인트) + Gemini 자연어 경로 추천</li>
-      </ul>
-    </div>
 
     <div class="side-card">
       <div class="side-header">
-        <div class="side-name">auto-cut</div>
+        <div class="side-name"><a href="https://github.com/WOOOOOOOONG/auto-cut" target="_blank">auto-cut</a></div>
         <span class="side-status status-ver">v1.2.0</span>
       </div>
       <div class="proj-stack">
