@@ -573,7 +573,7 @@ a:hover{color:var(--accent-muted)}
       <div class="tl-period">2023.03 — 현재</div>
       <div class="tl-company-name">(주)두꺼비세상 · 피터팬의 좋은방구하기 사업부 <a class="company-link" href="https://www.peterpanz.com/" target="_blank">peterpanz.com ↗</a></div>
       <div class="tl-company-role">개발팀 매니저 · 부동산 중개 플랫폼 (PropTech)</div>
-      <p class="tl-company-desc">매물·지도 등 프롭테크 핵심 도메인부터 결제·검색·외부 연동까지 누적 800만+ 매물 규모 서비스 운영. PHP 7.1/Laravel 5.2 레거시를 PHP 8.3/Laravel 10 신규 저장소로 점진 이관 중이며, 안심번호·검색 등 일부 도메인은 Java/Spring Boot, Python/FastAPI로 별도 구축. 249건의 Confluence 기술 문서로 핵심 비즈니스 로직과 의사결정을 팀 자산화.</p>
+      <p class="tl-company-desc">매물·지도 등 프롭테크 핵심 도메인부터 결제·검색·외부 연동까지 누적 800만+ 매물 규모 서비스 운영. PHP 7.1/Laravel 5.2 레거시를 PHP 8.3/Laravel 10 신규 저장소로 점진 이관 중이며, 안심번호·Opensearch 등 일부 서비스는 Java/Spring Boot, Python/FastAPI로 별도 구축. 249건의 Confluence 기술 문서로 핵심 비즈니스 로직과 의사결정을 팀 자산화.</p>
 
       <!-- Project 1 -->
       <div class="project-card">
@@ -598,7 +598,32 @@ a:hover{color:var(--accent-muted)}
       <!-- Project 2 -->
       <div class="project-card">
         <div class="proj-header">
-          <div class="proj-title">2. 거주후기 건물 데이터 구축 및 OpenSearch 검색 서비스</div>
+          <div class="proj-title">2. 중개사 결제 시스템 도입</div>
+          <div class="proj-role">설계·개발 · 2026.03~04</div>
+        </div>
+        <div class="proj-stack">
+          <span class="tag tag-blue">PHP 8.x</span>
+          <span class="tag tag-blue">Laravel</span>
+          <span class="tag tag-amber">KG Mobilians</span>
+          <span class="tag tag-purple">MySQL 8.0</span>
+          <span class="tag tag-coral">Redis</span>
+        </div>
+        <div class="proj-context">계좌이체·어드민 수동 부여 방식에서 중개사 셀프 온라인 결제로 전환. 주문서 생성부터 PG 연동, 후처리까지 풀 플로우를 설계·구현.</div>
+        <ul>
+          <li>주문서 생성 → PG 결제 → 쿠폰·포인트 발급까지 전체 결제 플로우 설계</li>
+          <li>상품 유형별 가격 계산 로직 구현 — 지역등급·기간·업체등급 할인 + VAT 자동 처리</li>
+          <li>대표/소속공인중개사 권한 분리 결제 로직 (결제 주체 ≠ 사용 주체 케이스 정리)</li>
+          <li>DB 후처리 실패 시 PG 결제를 자동 취소하는 망취소(Network Cancel) 로직 구현</li>
+          <li>멱등성 체크로 중복 주문 방지, 영업담당자 Slack 자동 알림 연동</li>
+        </ul>
+        <div class="result"><span class="arrow">→</span><span class="desc">계좌이체·어드민 수동 부여 → 중개사 셀프 결제 전환</span></div>
+        <div class="result"><span class="arrow">→</span><span class="desc">망취소 도입으로 결제-후처리 불일치</span><span class="val">0건 유지</span></div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="proj-header">
+          <div class="proj-title">3. 거주후기 건물 데이터 구축 및 OpenSearch 검색 서비스</div>
           <div class="proj-role">개발 · 2025.10~2026.01</div>
         </div>
         <div class="proj-stack">
@@ -620,10 +645,10 @@ a:hover{color:var(--accent-muted)}
         </ul>
       </div>
 
-      <!-- Project 3 -->
+      <!-- Project 4 -->
       <div class="project-card">
         <div class="proj-header">
-          <div class="proj-title">3. 안심번호 시스템 V2 — 레거시 재구축</div>
+          <div class="proj-title">4. 안심번호 시스템 V2 — 레거시 재구축</div>
           <div class="proj-role">개발 · 2025.03~12</div>
         </div>
         <div class="proj-stack">
@@ -645,10 +670,10 @@ a:hover{color:var(--accent-muted)}
         <div class="result"><span class="arrow">→</span><span class="desc">가용 안심번호</span><span class="val">500건 → 50,000건</span><span class="desc">(100배 정상화)</span></div>
       </div>
 
-      <!-- Project 4 -->
+      <!-- Project 5 -->
       <div class="project-card">
         <div class="proj-header">
-          <div class="proj-title">4. 최근본방 조회 성능 개선 — 6억 건 데이터 튜닝</div>
+          <div class="proj-title">5. 최근본방 조회 성능 개선 — 6억 건 데이터 튜닝</div>
           <div class="proj-role">진단·설계·배포 · 2025.03</div>
         </div>
         <div class="proj-stack">
@@ -665,31 +690,6 @@ a:hover{color:var(--accent-muted)}
         </ul>
         <div class="result"><span class="arrow">→</span><span class="desc">Heavy User P95</span><span class="val">20s+ → 0.8s</span></div>
         <div class="result"><span class="arrow">→</span><span class="desc">일반 사용자</span><span class="val">~1s → 0.2s</span></div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="project-card">
-        <div class="proj-header">
-          <div class="proj-title">5. 중개사 결제 시스템 도입</div>
-          <div class="proj-role">설계·개발 · 2026.03~04</div>
-        </div>
-        <div class="proj-stack">
-          <span class="tag tag-blue">PHP 8.x</span>
-          <span class="tag tag-blue">Laravel</span>
-          <span class="tag tag-amber">KG Mobilians</span>
-          <span class="tag tag-purple">MySQL 8.0</span>
-          <span class="tag tag-coral">Redis</span>
-        </div>
-        <div class="proj-context">계좌이체·어드민 수동 부여 방식에서 중개사 셀프 온라인 결제로 전환. 주문서 생성부터 PG 연동, 후처리까지 풀 플로우를 설계·구현.</div>
-        <ul>
-          <li>주문서 생성 → PG 결제 → 쿠폰·포인트 발급까지 전체 결제 플로우 설계</li>
-          <li>상품 유형별 가격 계산 로직 구현 — 지역등급·기간·업체등급 할인 + VAT 자동 처리</li>
-          <li>대표/소속공인중개사 권한 분리 결제 로직 (결제 주체 ≠ 사용 주체 케이스 정리)</li>
-          <li>DB 후처리 실패 시 PG 결제를 자동 취소하는 망취소(Network Cancel) 로직 구현</li>
-          <li>멱등성 체크로 중복 주문 방지, 영업담당자 Slack 자동 알림 연동</li>
-        </ul>
-        <div class="result"><span class="arrow">→</span><span class="desc">계좌이체·어드민 수동 부여 → 중개사 셀프 결제 전환</span></div>
-        <div class="result"><span class="arrow">→</span><span class="desc">망취소 도입으로 결제-후처리 불일치</span><span class="val">0건 유지</span></div>
       </div>
 
       <!-- 기타 성과 -->
